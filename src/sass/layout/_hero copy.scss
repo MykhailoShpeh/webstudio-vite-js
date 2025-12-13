@@ -1,0 +1,149 @@
+.main {
+    min-width: 320px;
+    width: 100%;
+}
+
+
+.hero {
+    width: 100%;
+    min-width: 320px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: getColor('section');
+
+    @media screen and (min-width:480px) {
+        background-image:
+            linear-gradient(getColor('background-overlay'),
+                getColor('background-overlay')),
+            url(../images/hero-m-1x.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(getColor('background-overlay'),
+                getColor('background-overlay')),
+            url(../images/hero-m-2x.jpg);
+    }
+
+    @media screen and (min-width:768px) {
+        background-image:
+            linear-gradient(getColor('background-overlay'),
+                getColor('background-overlay')),
+            url(../images/hero-t-1x.jpg);
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(getColor('background-overlay'),
+                    getColor('background-overlay')),
+                url(../images/hero-t-2x.jpg);
+        }
+
+        @media screen and (min-width:1200px) {
+            background-image: linear-gradient(getColor('background-overlay'),
+                    getColor('background-overlay')),
+                url(../images/hero-d-1x.jpg);
+
+            @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: linear-gradient(getColor('background-overlay'),
+                        getColor('background-overlay')),
+                    url(../images/hero-d-2x.jpg);
+            }
+        }
+
+        .heromain {
+            @include flex_fdc-aic;
+        }
+
+        .hero__title {
+            min-width: 320px;
+            font-family: getFont(roboto);
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            font-size: 44px;
+            line-height: 1.4;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+
+            @media screen and (min-width:480px) {
+                width: 360px;
+                height: 84px;
+                font-size: 26px;
+                line-height: 162%;
+            }
+
+            @media screen and (min-width:480px) {
+                width: 360px;
+                height: 84px;
+                font-size: 26px;
+                line-height: 162%;
+            }
+
+            @media screen and (min-width: 1200px) {
+                width: 696px;
+            }
+        }
+
+        &__button {
+            font-family: getFont(raleway);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            background-color: getColor('button');
+            font-size: 16px;
+            line-height: 1.9;
+            text-align: center;
+            color: #fff;
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+            border-radius: 4px;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+            border: none;
+            cursor: pointer;
+            scale: 1;
+            animation-name: move-of-button;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+
+            @media screen and (min-width:480px) {
+                width: 200px;
+                height: 50px;
+            }
+
+
+
+            @media screen and (min-width: 1200px) {
+                width: 216px;
+                height: 50px;
+            }
+        }
+
+        @keyframes move-of-button {
+            0% {
+                scale: 1;
+            }
+
+            50% {
+                scale: 1.1;
+            }
+
+            100% {
+                scale: 1;
+            }
+        }
+
+        &__button:active {
+            background: $button-color;
+            color: #fff;
+        }
+    }
+}

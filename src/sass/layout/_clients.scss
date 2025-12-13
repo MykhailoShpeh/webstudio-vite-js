@@ -1,0 +1,116 @@
+.clients {
+
+
+    @media screen and (min-width:480px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        min-width: 1200px;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    &__title {
+        letter-spacing: 0.03em;
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        color: #212121;
+        margin-bottom: 50px;
+    }
+
+    .clients-list {
+
+        @media screen and (max-width:480px) {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 30px;
+
+        }
+
+        @media screen and (min-width:480px) {
+            width: 450px;
+            height: 336px;
+            gap: 30px;
+            @include flex_ww;
+        }
+
+        @media screen and (min-width:768px) {
+            width: 738px;
+            height: 277px;
+            gap: 30px;
+            @include flex_ww;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 1170px;
+            height: 184px;
+        }
+
+
+        &__item {
+            border: 1px solid #AFB1B8;
+            border-radius: 4px;
+
+            @media screen and (max-width:480px) {
+                width: 125px;
+                height: 92px;
+            }
+
+            @media screen and (min-width:480px) {
+                width: 210px;
+                height: 92px;
+            }
+
+            @media screen and (min-width:768px) {
+                width: 226px;
+                height: 92px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                width: 170px;
+                height: 92px;
+            }
+
+            @include flex;
+            fill: #AFB1B8;
+            transition-property: color,
+            fill;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        &__item:hover {
+            border: 1px solid #2196f3;
+            border-radius: 4px;
+            width: 170px;
+            height: 92px;
+            cursor: pointer;
+            fill: #2196F3;
+
+
+
+            @media screen and (min-width:480px) {
+                width: 210px;
+                height: 92px;
+            }
+
+            @media screen and (min-width:768px) {
+                width: 226px;
+                height: 92px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                width: 170px;
+                height: 92px;
+            }
+
+        }
+    }
+}

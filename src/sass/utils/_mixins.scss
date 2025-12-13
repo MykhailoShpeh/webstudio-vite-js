@@ -1,0 +1,48 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_aic {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex_fdc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex_fdc-aic {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin flex_jcfs {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@mixin flex_jcsb {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex_jcc {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex_ww {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin raleway {
+    font-family: getFont('raleway');
+    letter-spacing: 0.03em;
+    font-weight: 700;
+}

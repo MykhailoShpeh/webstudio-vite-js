@@ -1,0 +1,110 @@
+.ourwork {
+    padding-top: 94px;
+
+    .ourwork-list {
+
+        @media screen and (min-width:768px) {
+            width: 738px;
+            // height: 480px;
+            @include flex_ww;
+            gap: 20px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            @include flex_jcfs;
+            gap: 0px;
+            flex-wrap: nowrap;
+        }
+
+        &__title {
+            font-family: getFont(roboto);
+            letter-spacing: 0.03em;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            @media screen and (min-width:480px) {
+                text-align: center;
+            }
+        }
+    }
+
+    .ourwork-list__text {
+        font-family: getFont(roboto);
+        letter-spacing: 0.03em;
+        font-weight: 400;
+        color: getColor('workers');
+        font-size: 14px;
+        line-height: 1.7;
+        margin-top: 10px;
+
+        @media screen and (min-width:480px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+.ourwork-list__item {
+
+    @media screen and (min-width:768px) {
+        width: 354px;
+        height: 224px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+        height: 224px;
+        margin-right: 30px;
+    }
+
+
+}
+
+.ourwork-list__item::before {
+    height: 120px;
+    margin-bottom: 30px;
+    content: "";
+    display: block;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: getColor('background');
+
+    @media screen and (min-width:480px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
+}
+
+.ourwork-list__item:nth-child(1)::before {
+    background-image: url(../svg/anten.svg);
+    content: '';
+}
+
+.ourwork-list__item:nth-child(2)::before {
+    background-image: url(../svg/clock.svg);
+    content: '';
+}
+
+.ourwork-list__item:nth-child(3)::before {
+    background-image: url(../svg/diagram.svg);
+    content: '';
+}
+
+.ourwork-list__item:nth-child(4)::before {
+    background-image: url(../svg/astronaut.svg);
+    content: '';
+}
+
+.ourwork-list__item:last-of-type {
+    margin: 0px;
+}
