@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Ігор",
+        "profession": "Product Designer",
+        "images": {
+            "desktop": [
+                "./images/igor-d-1x.jpg",
+                "./images/igor-d-2x.jpg",
+                "./images/igor-d-3x.jpg"
+            ],
+            "tablet": [
+                "./images/igor-t-1x.jpg",
+                "./images/igor-t-2x.jpg",
+                "./images/igor-t-3x.jpg"
+            ],
+            "mobile": [
+                "./images/igor-m-1x.jpg",
+                "./images/igor-m-2x.jpg",
+                "./images/igor-m-3x.jpg"
+            ],
+            "default": "./images/igor-m-1x.jpg"
+        },
+        "icons": [
+            "./images/symboldefs.svg#instagram",
+            "./images/symboldefs.svg#twitter",
+            "./images/symboldefs.svg#facebook",
+            "./images/symboldefs.svg#linkedin"
+        ]
+    },
+    {
+        "name": "Ольга Рєпіна",
+        "profession": "Frontend Developer",
+        "images": {
+            "desktop": [
+                "../images/olha-d-1x.jpg",
+                "./images/olha-d-2x.jpg",
+                "./images/olha-d-3x.jpg"
+            ],
+            "tablet": [
+                "./images/olha-t-1x.jpg",
+                "./images/olha-t-2x.jpg",
+                "./images/olha-t-3x.jpg"
+            ],
+            "mobile": [
+                "./images/olha-m-1x.jpg",
+                "./images/olha-m-2x.jpg",
+                "./images/olha-m-3x.jpg"
+            ],
+            "default": "./images/olha-m-1x.jpg"
+        },
+        "icons": [
+            "./images/symboldefs.svg#instagram",
+            "./images/symboldefs.svg#twitter",
+            "./images/symboldefs.svg#facebook",
+            "./images/symboldefs.svg#linkedin"
+        ]
+    },
+    {
+        "name": "Микола Тарасов",
+        "profession": "Marketing",
+        "images": {
+            "desktop": [
+                "./images/micola-d-1x.jpg",
+                "./images/micola-d-2x.jpg",
+                "./images/micola-d-3x.jpg"
+            ],
+            "tablet": [
+                "./images/micola-t-1x.jpg",
+                "./images/micola-t-2x.jpg",
+                "./images/micola-t-3x.jpg"
+            ],
+            "mobile": [
+                "./images/micola-m-1x.jpg",
+                "./images/micola-m-2x.jpg",
+                "./images/micola-m-3x.jpg"
+            ],
+            "default": "./images/micola-m-1x.jpg"
+        },
+        "icons": [
+            "./images/symboldefs.svg#instagram",
+            "./images/symboldefs.svg#twitter",
+            "./images/symboldefs.svg#facebook",
+            "./images/symboldefs.svg#linkedin"
+        ]
+    },
+    {
+        "name": "Михайло Єрмаков",
+        "profession": "UI Designer",
+        "images": {
+            "desktop": [
+                "./images/mihailo-d-1x.jpg",
+                "./images/mihailo-d-2x.jpg",
+                "./images/mihailo-d-3x.jpg"
+            ],
+            "tablet": [
+                "./images/mihailo-t-1x.jpg",
+                "./images/mihailo-t-2x.jpg",
+                "./images/mihailo-t-3x.jpg"
+            ],
+            "mobile": [
+                "./images/mihailo-m-1x.jpg",
+                "./images/mihailo-m-2x.jpg",
+                "./images/mihailo-m-3x.jpg"
+            ],
+            "default": "./images/mihailo-m-1x.jpg"
+        },
+        "icons": [
+            "./images/symboldefs.svg#instagram",
+            "./images/symboldefs.svg#twitter",
+            "./images/symboldefs.svg#facebook",
+            "./images/symboldefs.svg#linkedin"
+        ]
+    }
+]

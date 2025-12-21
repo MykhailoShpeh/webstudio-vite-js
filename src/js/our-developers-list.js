@@ -4,8 +4,8 @@ console.log(
 );
 
 const developersList = document.querySelector(".workers-list");
-
-const dataDevelopersList = [
+//! крок №1. Створюємо дефолтний список розробників (4)
+let dataDevelopersList = [
     {
         name: "Ігор",
         profession: "Product Designer",
@@ -64,9 +64,26 @@ const dataDevelopersList = [
     }
 ]
 
+const jsonDevelopersList = JSON.stringify(dataDevelopersList);
+
+console.log("jsonDevelopersList: ", jsonDevelopersList);
+
 // console.log(dataDevelopersList[0].images.desktop[1])
 
 console.log(dataDevelopersList)
+
+//! звернення до localstorage, чи є dataDevelopers
+
+if (localStorage.getItem('dataDevelopers')) {
+    //! забираємо дані з localstorage в змінну dataDevelopersList
+    dataDevelopersList = JSON.parse(localStorage.getItem('dataDevelopers'));
+
+    console.log("dataDevelopersList: ", dataDevelopersList);
+} else {
+    console.log('створюємо дефолтний список розробників');
+
+    localStorage.setItem('dataDevelopers', JSON.stringify(dataDevelopersList));
+}
 
 const markup = dataDevelopersList.map(item =>
     `<li class="workers-list__item">
