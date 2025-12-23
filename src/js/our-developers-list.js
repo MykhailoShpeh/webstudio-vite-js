@@ -2,6 +2,8 @@ console.log(
     '%c Рендеримо список розробників в секції "Наша команда" ',
     'color: white; background-color: #D33F49',
 );
+//!✅ Рішення-3: з new URL(...)(динамічний шлях без явного import)
+new URL("../images/symboldefs.svg#instagram", import.meta.url).href;
 
 const developersList = document.querySelector(".workers-list");
 //! крок №1. Створюємо дефолтний список розробників (4)
@@ -10,57 +12,112 @@ let dataDevelopersList = [
         name: "Ігор",
         profession: "Product Designer",
         images: {
-            desktop: ['./images/igor-d-1x.jpg', './images/igor-d-2x.jpg', './images/igor-d-3x.jpg'],
-            tablet: ['./images/igor-t-1x.jpg', './images/igor-t-2x.jpg', './images/igor-t-3x.jpg'],    
-            mobile: ['./images/igor-m-1x.jpg', './images/igor-m-2x.jpg', './images/igor-m-3x.jpg'],
-            default: "./images/igor-m-1x.jpg"
+            desktop: [
+                new URL('../images/igor-d-1x.jpg', import.meta.url).href,
+                new URL('../images/igor-d-2x.jpg', import.meta.url).href,
+                new URL('../images/igor-d-3x.jpg', import.meta.url).href, 
+            ],
+            tablet: [
+                new URL('../images/igor-t-1x.jpg',  import.meta.url).href, 
+                new URL('../images/igor-t-2x.jpg', import.meta.url).href,
+                new URL('../images/igor-t-3x.jpg', import.meta.url).href,
+            ],    
+            mobile: [
+                new URL('../images/igor-m-1x.jpg', import.meta.url).href,
+                new URL('../images/igor-m-2x.jpg', import.meta.url).href,
+                new URL('../images/igor-m-3x.jpg', import.meta.url).href,
+            ],
+            default: new URL('../images/igor-m-1x.jpg', import.meta.url).href,
         },
-        icons: ['./images/symboldefs.svg#instagram',
-            './images/symboldefs.svg#twitter',
-            './images/symboldefs.svg#facebook',
-             './images/symboldefs.svg#linkedin']
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL('../images/symboldefs.svg#twitter', import.meta.url).href,
+            new URL('../images/symboldefs.svg#facebook', import.meta.url).href, 
+            new URL('../images/symboldefs.svg#linkedin', import.meta.url).href
+        ]
     },
     {
+        //!✅ Рішення-3:
         name: "Ольга Рєпіна",
-        profession: "Frontend Developer",
+        position: "Frontend Developer",
         images: {
-            desktop: ['../images/olha-d-1x.jpg', './images/olha-d-2x.jpg', './images/olha-d-3x.jpg'],
-            tablet: ['./images/olha-t-1x.jpg', './images/olha-t-2x.jpg', './images/olha-t-3x.jpg'],
-            mobile: ['./images/olha-m-1x.jpg', './images/olha-m-2x.jpg', './images/olha-m-3x.jpg'],
-            default: "./images/olha-m-1x.jpg"
+            desktop: [
+                new URL("../images/olha-d-1x.jpg", import.meta.url).href,
+                new URL("../images/olha-d-2x.jpg", import.meta.url).href,
+                new URL("../images/olha-d-3x.jpg", import.meta.url).href
+            ],
+            tablet: [
+                new URL("../images/olha-t-1x.jpg", import.meta.url).href,
+                new URL("../images/olha-t-2x.jpg", import.meta.url).href,
+                new URL("../images/olha-t-3x.jpg", import.meta.url).href
+            ],
+            mobile: [
+                new URL("../images/olha-m-1x.jpg", import.meta.url).href,
+                new URL("../images/olha-m-2x.jpg", import.meta.url).href,
+                new URL("../images/olha-m-3x.jpg", import.meta.url).href
+            ],
+            default: new URL("../images/olha-m-1x.jpg", import.meta.url).href
         },
-        icons: ['./images/symboldefs.svg#instagram',
-            './images/symboldefs.svg#twitter',
-            './images/symboldefs.svg#facebook',
-            './images/symboldefs.svg#linkedin']
+        icons: [
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
+        ]
     },
     {
         name: "Микола Тарасов",
         profession: "Marketing",
         images: {
-            desktop: ['./images/micola-d-1x.jpg', './images/micola-d-2x.jpg', './images/micola-d-3x.jpg'],
-            tablet: ['./images/micola-t-1x.jpg', './images/micola-t-2x.jpg', './images/micola-t-3x.jpg'],
-            mobile: ['./images/micola-m-1x.jpg', './images/micola-m-2x.jpg', './images/micola-m-3x.jpg'],
-            default: "./images/micola-m-1x.jpg"
+            desktop: [
+                new URL('../images/micola-d-1x.jpg', import.meta.url).href,
+                new URL('../images/micola-d-2x.jpg', import.meta.url).href,
+                new URL('../images/micola-d-3x.jpg', import.meta.url).href,
+            ],
+            tablet: [
+                new URL('../images/micola-t-1x.jpg', import.meta.url).href,
+                new URL('../images/micola-t-2x.jpg', import.meta.url).href,
+                new URL('../images/micola-t-3x.jpg', import.meta.url).href,
+            ],
+            mobile: [
+                new URL('../images/micola-m-1x.jpg', import.meta.url).href,
+                new URL('../images/micola-m-2x.jpg', import.meta.url).href,
+                new URL('../images/micola-m-3x.jpg', import.meta.url).href,
+            ],
+            default: new URL('../images/micola-m-1x.jpg', import.meta.url).href,
         },
-        icons: ['./images/symboldefs.svg#instagram',
-            './images/symboldefs.svg#twitter',
-            './images/symboldefs.svg#facebook',
-            './images/symboldefs.svg#linkedin']
+        icons: [new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+        new URL('../images/symboldefs.svg#twitter', import.meta.url).href,
+        new URL('../images/symboldefs.svg#facebook', import.meta.url).href,
+        new URL('../images/symboldefs.svg#linkedin', import.meta.url).href
+        ]
     },
     {
         name: "Михайло Єрмаков",
         profession: "UI Designer",
         images: {
-            desktop: ['./images/mihailo-d-1x.jpg', './images/mihailo-d-2x.jpg', './images/mihailo-d-3x.jpg'],
-            tablet: ['./images/mihailo-t-1x.jpg', './images/mihailo-t-2x.jpg', './images/mihailo-t-3x.jpg'],
-            mobile: ['./images/mihailo-m-1x.jpg', './images/mihailo-m-2x.jpg', './images/mihailo-m-3x.jpg'],
-            default: "./images/mihailo-m-1x.jpg"
+            desktop: [
+                new URL('../images/mihailo-d-1x.jpg', import.meta.url).href,
+                new URL('../images/mihailo-d-2x.jpg', import.meta.url).href,
+                new URL('../images/mihailo-d-3x.jpg', import.meta.url).href,
+            ],
+            tablet: [
+                new URL('../images/mihailo-t-1x.jpg', import.meta.url).href,
+                new URL('../images/mihailo-t-2x.jpg', import.meta.url).href,
+                new URL('../images/mihailo-t-3x.jpg', import.meta.url).href,
+            ],
+            mobile: [
+                new URL('../images/mihailo-m-1x.jpg', import.meta.url).href,
+                new URL('../images/mihailo-m-2x.jpg', import.meta.url).href,
+                new URL('../images/mihailo-m-3x.jpg', import.meta.url).href,
+            ],
+            default: new URL('../images/mihailo-m-1x.jpg', import.meta.url).href,
         },
-        icons: ['./images/symboldefs.svg#instagram',
-            './images/symboldefs.svg#twitter',
-            './images/symboldefs.svg#facebook',
-            './images/symboldefs.svg#linkedin']
+        icons: [new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+        new URL('../images/symboldefs.svg#twitter', import.meta.url).href,
+        new URL('../images/symboldefs.svg#facebook', import.meta.url).href,
+        new URL('../images/symboldefs.svg#linkedin', import.meta.url).href
+        ]
     }
 ]
 
@@ -68,9 +125,9 @@ const jsonDevelopersList = JSON.stringify(dataDevelopersList);
 
 console.log("jsonDevelopersList: ", jsonDevelopersList);
 
-// console.log(dataDevelopersList[0].images.desktop[1])
+console.log(dataDevelopersList[0].images.desktop[0])
 
-console.log(dataDevelopersList)
+// console.log(dataDevelopersList)
 
 //! звернення до localstorage, чи є dataDevelopers
 
