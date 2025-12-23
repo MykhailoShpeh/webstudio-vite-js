@@ -2,6 +2,13 @@ console.log(
     '%c Рендеримо список розробників в секції "Наша команда" ',
     'color: white; background-color: #D33F49',
 );
+
+//! імпортування бібліотеки HandeBars
+import Handlebars from "handlebars";
+import developerTemplate from "../templates/our-workers.hbs?raw";
+
+
+
 //!✅ Рішення-3: з new URL(...)(динамічний шлях без явного import)
 new URL("../images/symboldefs.svg#instagram", import.meta.url).href;
 
@@ -142,51 +149,60 @@ if (localStorage.getItem('dataDevelopers')) {
     localStorage.setItem('dataDevelopers', JSON.stringify(dataDevelopersList));
 }
 
-const markup = dataDevelopersList.map(item =>
-    `<li class="workers-list__item">
-                        <picture>
-                            <source srcset="${item.images.desktop[0]} 1x, ${item.images.desktop[1]} 2x, ${item.images.desktop[2]} 3x"
-                             media="(min-width: 1200px)" />
-                            <source srcset="${item.images.tablet[0]} 1x, ${item.images.tablet[1]} 2x, ${item.images.tablet[2]} 3x"
-                                media="(min-width: 768px)">
-                            <source srcset="${item.images.mobile[0]} 1x, ${item.images.mobile[1]} 2x, ${item.images.mobile[2]} 3x"
-                                media="(min-width: 480px)">
-                            <img class="workers-list__img" src="${item.images.mobile[0]}" alt="Ігор">
-                        </picture>
-                        <p class="workers-list__text">${item.name}</p>
-                        <h3 class="workers-list__title">${item.profession}</h3>
-                        <ul class="workers-list--social-media">
-                            <li class="workers-list__item--social-media">
-                                <a class="workers-list__link" href="https://www.instagram.com/">
-                                    <svg class="svgs" width="20" height="20">
-                                        <use href="${item.icons[0]}"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="workers-list__item--social-media">
-                                <a class="workers-list__link" href="https://twitter.com/">
-                                    <svg class="svgs" width="20" height="20">
-                                        <use href="${item.icons[1]}"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="workers-list__item--social-media">
-                                <a class="workers-list__link" href="https://uk-ua.facebook.com/">
-                                    <svg class="svgs" width="20" height="20">
-                                        <use href="${item.icons[2]}"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="workers-list__item--social-media">
-                                <a class="workers-list__link" href="https://ua.linkedin.com/">
-                                    <svg class="svgs" width="20" height="20">
-                                        <use href="${item.icons[3]}"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-    `
-).join("");
+//!створення розмітки без handlebars
+// const markup = dataDevelopersList.map(item =>
+//     `<li class="workers-list__item">
+//                         <picture>
+//                             <source srcset="${item.images.desktop[0]} 1x, ${item.images.desktop[1]} 2x, ${item.images.desktop[2]} 3x"
+//                              media="(min-width: 1200px)" />
+//                             <source srcset="${item.images.tablet[0]} 1x, ${item.images.tablet[1]} 2x, ${item.images.tablet[2]} 3x"
+//                                 media="(min-width: 768px)">
+//                             <source srcset="${item.images.mobile[0]} 1x, ${item.images.mobile[1]} 2x, ${item.images.mobile[2]} 3x"
+//                                 media="(min-width: 480px)">
+//                             <img class="workers-list__img" src="${item.images.mobile[0]}" alt="Ігор">
+//                         </picture>
+//                         <p class="workers-list__text">${item.name}</p>
+//                         <h3 class="workers-list__title">${item.profession}</h3>
+//                         <ul class="workers-list--social-media">
+//                             <li class="workers-list__item--social-media">
+//                                 <a class="workers-list__link" href="https://www.instagram.com/">
+//                                     <svg class="svgs" width="20" height="20">
+//                                         <use href="${item.icons[0]}"></use>
+//                                     </svg>
+//                                 </a>
+//                             </li>
+//                             <li class="workers-list__item--social-media">
+//                                 <a class="workers-list__link" href="https://twitter.com/">
+//                                     <svg class="svgs" width="20" height="20">
+//                                         <use href="${item.icons[1]}"></use>
+//                                     </svg>
+//                                 </a>
+//                             </li>
+//                             <li class="workers-list__item--social-media">
+//                                 <a class="workers-list__link" href="https://uk-ua.facebook.com/">
+//                                     <svg class="svgs" width="20" height="20">
+//                                         <use href="${item.icons[2]}"></use>
+//                                     </svg>
+//                                 </a>
+//                             </li>
+//                             <li class="workers-list__item--social-media">
+//                                 <a class="workers-list__link" href="https://ua.linkedin.com/">
+//                                     <svg class="svgs" width="20" height="20">
+//                                         <use href="${item.icons[3]}"></use>
+//                                     </svg>
+//                                 </a>
+//                             </li>
+//                         </ul>
+//                     </li>
+//     `
+// ).join("");
+
+// developersList.innerHTML = markup;
+
+//!розмітка з handlebars
+
+const template = Handlebars.compile(developerTemplate);
+
+const markup = dataDevelopersList.map(item => template(item)).join("")
 
 developersList.innerHTML = markup;
