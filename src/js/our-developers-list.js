@@ -39,7 +39,7 @@ let dataDevelopersList = [
     {
         //!✅ Рішення-3:
         name: "Ольга Рєпіна",
-        position: "Frontend Developer",
+        profession: "Frontend Developer",
         images: {
             desktop: [
                 new URL("../images/olha-d-1x.jpg", import.meta.url).href,
