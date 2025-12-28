@@ -16,31 +16,31 @@ const developersList = document.querySelector('.workers-list');
 //! крок №1. Створюємо дефолтний список розробників (4)
 let dataDevelopersList = [
     {
-        name: 'Ігор',
-        profession: 'Product Designer',
+        name: "Ігор Дем'яненко",
+        profession: "Product Designer",
         images: {
             desktop: [
-                new URL('../images/igor-d-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/igor-d-2x.jpg', import.meta.url).href + ' 2x',
-                new URL('../images/igor-d-3x.jpg', import.meta.url).href + ' 3x' 
+                new URL("../images/igor-d-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-d-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-d-3x.jpg", import.meta.url).href + " 3x"
             ],
             tablet: [
-                new URL('../images/igor-t-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/igor-t-2x.jpg', import.meta.url).href + ' 2x',
-                new URL('../images/igor-t-3x.jpg', import.meta.url).href + ' 3x'
-            ],    
-            mobile: [
-                new URL('../images/igor-m-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/igor-m-2x.jpg', import.meta.url).href + ' 2x',
-                new URL('../images/igor-m-3x.jpg', import.meta.url).href + ' 3x'
+                new URL("../images/igor-t-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-t-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-t-3x.jpg", import.meta.url).href + " 3x"
             ],
-            default: new URL('../images/igor-m-1x.jpg', import.meta.url).href,
+            mobile: [
+                new URL("../images/igor-m-1x.jpg", import.meta.url).href + " 1x,",
+                new URL("../images/igor-m-2x.jpg", import.meta.url).href + " 2x,",
+                new URL("../images/igor-m-3x.jpg", import.meta.url).href + " 3x"
+            ],
+            default: new URL("../images/igor-m-1x.jpg", import.meta.url).href
         },
         icons: [
-            new URL('../images/symboldefs.svg#instagram', import.meta.url).href,
-            new URL('../images/symboldefs.svg#twitter', import.meta.url).href,
-            new URL('../images/symboldefs.svg#facebook', import.meta.url).href, 
-            new URL('../images/symboldefs.svg#linkedin', import.meta.url).href
+            new URL("../images/symboldefs.svg#instagram", import.meta.url).href,
+            new URL("../images/symboldefs.svg#twitter", import.meta.url).href,
+            new URL("../images/symboldefs.svg#facebook", import.meta.url).href,
+            new URL("../images/symboldefs.svg#linkedin", import.meta.url).href
         ]
     },
     {
@@ -49,18 +49,18 @@ let dataDevelopersList = [
         profession: 'Frontend Developer',
         images: {
             desktop: [
-                new URL('../images/olha-d-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/olha-d-2x.jpg', import.meta.url).href + ' 2x',
+                new URL('../images/olha-d-1x.jpg', import.meta.url).href + ' 1x,',
+                new URL('../images/olha-d-2x.jpg', import.meta.url).href + ' 2x,',
                 new URL('../images/olha-d-3x.jpg', import.meta.url).href + ' 3x'
             ],
             tablet: [
-                new URL('../images/olha-t-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/olha-t-2x.jpg', import.meta.url).href + ' 2x',
+                new URL('../images/olha-t-1x.jpg', import.meta.url).href + ' 1x,',
+                new URL('../images/olha-t-2x.jpg', import.meta.url).href + ' 2x,',
                 new URL('../images/olha-t-3x.jpg', import.meta.url).href + ' 3x'
             ],
             mobile: [
-                new URL('../images/olha-m-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/olha-m-2x.jpg', import.meta.url).href + ' 2x',
+                new URL('../images/olha-m-1x.jpg', import.meta.url).href + ' 1x,',
+                new URL('../images/olha-m-2x.jpg', import.meta.url).href + ' 2x,',
                 new URL('../images/olha-m-3x.jpg', import.meta.url).href + ' 3x'
             ],
             default: new URL('../images/olha-m-1x.jpg', import.meta.url).href
@@ -77,18 +77,18 @@ let dataDevelopersList = [
         profession: 'Marketing',
         images: {
             desktop: [
-                new URL('../images/micola-d-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/micola-d-2x.jpg', import.meta.url).href + ' 2x',
+                new URL('../images/micola-d-1x.jpg', import.meta.url).href + ' 1x,',
+                new URL('../images/micola-d-2x.jpg', import.meta.url).href + ' 2x,',
                 new URL('../images/micola-d-3x.jpg', import.meta.url).href + ' 3x'
             ],
             tablet: [
-                new URL('../images/micola-t-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/micola-t-2x.jpg', import.meta.url).href + ' 2x',
+                new URL('../images/micola-t-1x.jpg', import.meta.url).href + ' 1x,',
+                new URL('../images/micola-t-2x.jpg', import.meta.url).href + ' 2x,',
                 new URL('../images/micola-t-3x.jpg', import.meta.url).href + ' 3x'
             ],
             mobile: [
-                new URL('../images/micola-m-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/micola-m-2x.jpg', import.meta.url).href + ' 2x',
+                new URL('../images/micola-m-1x.jpg', import.meta.url).href + ' 1x,',
+                new URL('../images/micola-m-2x.jpg', import.meta.url).href + ' 2x,',
                 new URL('../images/micola-m-3x.jpg', import.meta.url).href + ' 3x'
             ],
             default: new URL('../images/micola-m-1x.jpg', import.meta.url).href,
@@ -104,18 +104,18 @@ let dataDevelopersList = [
         profession: 'UI Designer',
         images: {
             desktop: [
-                new URL('../images/mihailo-d-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/mihailo-d-2x.jpg', import.meta.url).href + ' 2x',
+                new URL('../images/mihailo-d-1x.jpg', import.meta.url).href + ' 1x,',
+                new URL('../images/mihailo-d-2x.jpg', import.meta.url).href + ' 2x,',
                 new URL('../images/mihailo-d-3x.jpg', import.meta.url).href + ' 3x'
             ],
             tablet: [
-                new URL('../images/mihailo-t-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/mihailo-t-2x.jpg', import.meta.url).href + ' 2x',
+                new URL('../images/mihailo-t-1x.jpg', import.meta.url).href + ' 1x,',
+                new URL('../images/mihailo-t-2x.jpg', import.meta.url).href + ' 2x,',
                 new URL('../images/mihailo-t-3x.jpg', import.meta.url).href + ' 3x'
             ],
             mobile: [
-                new URL('../images/mihailo-m-1x.jpg', import.meta.url).href + ' 1x',
-                new URL('../images/mihailo-m-2x.jpg', import.meta.url).href + ' 2x',
+                new URL('../images/mihailo-m-1x.jpg', import.meta.url).href + ' 1x,',
+                new URL('../images/mihailo-m-2x.jpg', import.meta.url).href + ' 2x,',
                 new URL('../images/mihailo-m-3x.jpg', import.meta.url).href + ' 3x'
             ],
             default: new URL('../images/mihailo-m-1x.jpg', import.meta.url).href,
