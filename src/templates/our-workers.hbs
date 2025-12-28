@@ -1,3 +1,39 @@
+<li class="workers-list__item">
+    <picture>
+        <source srcset="
+        {{#each images.desktop}}
+          {{this}}
+        {{/each}}
+        " media="(min-width: 1200px)" />
+        <source srcset="
+        {{#each images.tablet}}
+          {{this}}
+        {{/each}}
+        " media="(min-width: 768px)" />
+        <source srcset="
+        {{#each images.mobile}}
+          {{this}}
+        {{/each}}
+        " media="(min-width: 480px)" />
+        <img class="our-developers-list__img" src="{{images.default}}" alt="{{name}}"/>
+    </picture>
+
+    <p class="workers-list__text">{{name}}</p>
+    <h3 class="workers-list__title">{{profession}}</h3>
+    <ul class="workers-list--social-media">
+        {{#each icons}}
+        <li class="workers-list__item--social-media">
+            <a class="workers-list__link" href="">
+                <svg class="svgs" width="20" height="20">
+                    <use href="{{this}}"></use>
+                </svg>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</li>
+
+
 {{!-- <li class="workers-list__item">
   <picture>
     <source media="(min-width: 1200px)" srcset="{{images.desktopSrcSet}}" />
@@ -26,50 +62,3 @@
     {{/each}}
   </ul>
 </li> --}}
-
-
-
-<li class="team__item">
-  <picture>
-    <source 
-        srcset="
-        {{#each images.desktop}}
-          {{this}}
-        {{/each}}
-        " 
-      media="(min-width: 1200px)" 
-    />
-    <source 
-        srcset="
-        {{#each images.tablet}}
-          {{this}}
-        {{/each}}
-        " 
-      media="(min-width: 768px)" 
-    />
-    <source 
-        srcset="
-        {{#each images.mobile}}
-          {{this}}
-        {{/each}}
-        " 
-      media="(min-width: 480px)" 
-    />
-    <img class="our-developers-list__img" src="{{images.default}}" alt="{{name}}" />
-  </picture>
-
-
-  <p class="team__text">{{name}}</p>
-  <h3 class="team__position">{{position}}</h3>
-  <ul class="our-developers-svg-list">
-    {{#each icons}}
-    <li class="our-developers-svg-list__item">
-      <a class="our-developers-svg-list__link" href="#">
-        <svg width="20" height="20">
-          <use href="{{this}}"></use>
-        </svg>
-      </a>
-    </li>
-    {{/each}}
-  </ul>
-</li>

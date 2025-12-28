@@ -128,6 +128,8 @@ let dataDevelopersList = [
     }
 ]
 
+console.log(dataDevelopersList);
+
 //! вирішення задачі з ретинізації 1x 2x 3x
 // function makeSrcSet(images) {
 //     return images
@@ -138,9 +140,9 @@ let dataDevelopersList = [
 
 const jsonDevelopersList = JSON.stringify(dataDevelopersList);
 
-console.log('jsonDevelopersList: ', jsonDevelopersList);
+// console.log('jsonDevelopersList: ', jsonDevelopersList);
 
-console.log(dataDevelopersList[0].images.desktop[0])
+// console.log(dataDevelopersList[0].images.desktop[0])
 
 // console.log(dataDevelopersList)
 
